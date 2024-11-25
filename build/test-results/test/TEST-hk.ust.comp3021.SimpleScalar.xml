@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hk.ust.comp3021.SimpleScalar" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-11-24T18:19:42" hostname="DESKTOP-BPI83RI" time="0.013">
+  <properties/>
+  <testcase name="binary()" classname="hk.ust.comp3021.SimpleScalar" time="0.011"/>
+  <testcase name="dag()" classname="hk.ust.comp3021.SimpleScalar" time="0.001"/>
+  <testcase name="unary()" classname="hk.ust.comp3021.SimpleScalar" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

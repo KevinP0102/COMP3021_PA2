@@ -12,18 +12,26 @@ public class FunNode<T> {
 
   public FunNode(int arity, Function<List<T>, T> fun) {
     // part 1: function data dependency graph node
-    throw new UnsupportedOperationException();
+    inputs = new ArrayList<Optional<T>>(arity);
+    IntStream.range(0, arity).forEach(i -> inputs.add(Optional.empty()));
+    f = fun;
   }
 
   public Optional<FunNode<T>> setInput(int i, T value) {
     // part 1: function data dependency graph node
-    throw new UnsupportedOperationException();
+    inputs.set(i, Optional.of(value));
+
+    if (inputs.stream().anyMatch(Optional::isEmpty)) {
+      return Optional.empty();
+    } else {
+      return Optional.of(this);
+    }
   }
 
   public T getResult() { return output.get(); }
 
   public void eval() {
     // part 1: function data dependency graph node
-    throw new UnsupportedOperationException();
+    output = Optional.of(f.apply(inputs.stream().map(Optional::get).toList()));
   }
 }

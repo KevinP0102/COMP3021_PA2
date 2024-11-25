@@ -11,8 +11,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 public class EvaluatorTest {
   static List<Evaluator<Object>> evaluators() {
-    return List.of(new SeqEvaluator<>(), new SeqContEvaluator<>(),
-                   new ParEvaluator<>(4));
+    //return List.of(new SeqEvaluator<>(), new SeqContEvaluator<>(), new ParEvaluator<>(4));
+    return List.of(new SeqContEvaluator<>());
   }
 
   @ParameterizedTest

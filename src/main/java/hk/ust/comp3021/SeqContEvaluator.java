@@ -9,11 +9,27 @@ public class SeqContEvaluator<T> implements Evaluator<T> {
 
   public void addDependency(FunNode<T> a, FunNode<T> b, int i) {
     // part 2: sequential function evaluator
-    throw new UnsupportedOperationException();
+    listeners.putIfAbsent(a, new ArrayList<>());
+    listeners.putIfAbsent(b, new ArrayList<>());
+    listeners.get(a).add(t -> {
+      Optional<FunNode<T>> check = b.setInput(i, t);
+      if (check.isPresent()) {
+        toEval.add(check.get());
+      }
+    } );
   }
 
   public void start(List<FunNode<T>> nodes) {
     // part 2: sequential function evaluator
-    throw new UnsupportedOperationException();
+    nodes.forEach(node -> {
+      node.eval();
+      listeners.get(node).forEach(c -> c.accept(node.getResult()));
+    });
+
+    while (!toEval.isEmpty()) {
+      FunNode<T> node = toEval.removeFirst();
+      node.eval();
+      listeners.get(node).forEach(c -> c.accept(node.getResult()));
+    }
   }
 }

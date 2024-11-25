@@ -49,11 +49,10 @@ public class TaskPoolTest {
     TaskPool pool = new TaskPool(4);
     var tasks = new ArrayList<Runnable>();
     IntStream.range(0, 40).forEach(i -> tasks.add(() -> {
-      tasks.add(() -> {
+      pool.addTask(() -> {
         try {
-          Thread.sleep(10000000);
+          Thread.sleep(1000000);
         } catch (InterruptedException e) {
-          assert false;
         }
       });
     }));

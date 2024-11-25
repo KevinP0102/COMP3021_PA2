@@ -3,6 +3,7 @@ package hk.ust.comp3021;
 import java.util.*;
 import java.util.function.Consumer;
 
+
 public class SeqEvaluator<T> implements Evaluator<T> {
   private HashMap<FunNode<T>, List<Consumer<T>>> listeners = new HashMap<>();
 
@@ -10,11 +11,20 @@ public class SeqEvaluator<T> implements Evaluator<T> {
     // part 2: sequential function evaluator
     listeners.putIfAbsent(a, new ArrayList<>());
     listeners.putIfAbsent(b, new ArrayList<>());
-    listeners.get(a).add(k -> b.setInput(i, a.getResult()));
+    listeners.get(a).add(t -> {
+      Optional<FunNode<T>> check = b.setInput(i, t);
+      if (check.isPresent()) {
+        check.get().eval();
+        listeners.get(check.get()).forEach(c -> c.accept(b.getResult()));
+      }
+    } );
   }
 
   public void start(List<FunNode<T>> nodes) {
     // part 2: sequential function evaluator
-    nodes.forEach(FunNode::eval);
+    nodes.forEach(node -> {
+      node.eval();
+      listeners.get(node).forEach(c -> c.accept(node.getResult()));
+    });
   }
 }

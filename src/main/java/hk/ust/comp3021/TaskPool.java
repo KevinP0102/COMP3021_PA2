@@ -16,36 +16,66 @@ public class TaskPool {
       this.idle = idle;
     }
 
-    public Optional<Runnable> getTask() {
+    public synchronized Optional<Runnable> getTask() throws InterruptedException {
       // part 3: task pool
-      throw new UnsupportedOperationException();
+      if (queue.isEmpty()) {
+        idle.release();
+        wait();
+      }
+      return Optional.of(queue.removeFirst());
     }
 
     public void addTask(Runnable task) {
       // part 3: task pool
-      throw new UnsupportedOperationException();
+      queue.addLast(task);
+      synchronized (this) {
+        notify();
+      }
     }
 
     public void terminate() {
       // part 3: task pool
-      throw new UnsupportedOperationException();
+      idle.release();
+      terminated = true;
     }
   }
 
   private TaskQueue queue;
   private Thread workers[];
-  private Semaphore idle = new Semaphore(0);
+  private Semaphore idle = new Semaphore(1);
 
   public TaskPool(int numThreads) {
     // part 3: task pool
-    throw new UnsupportedOperationException();
+    workers = new Thread[numThreads];
+    queue = new TaskQueue(numThreads, idle);
+
+    IntStream.range(0, numThreads).forEach(i -> {
+      workers[i] = new Thread(() -> {
+        while (true) {
+          if (queue.terminated) {break;}
+          try {
+            Runnable task = queue.getTask().get();
+            task.run();
+          } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            break;
+          }
+        }
+      });
+      workers[i].start();
+    });
   }
 
   public void addTask(Runnable task) { queue.addTask(task); }
 
-  public void addTasks(List<Runnable> tasks) {
+  public synchronized void addTasks(List<Runnable> tasks) {
     // part 3: task pool
-    throw new UnsupportedOperationException();
+    tasks.forEach(queue::addTask);
+
+    idle.drainPermits();
+    try {
+      idle.acquire();
+    } catch (InterruptedException e) {}
   }
 
   public void terminate() {

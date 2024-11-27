@@ -12,7 +12,7 @@ public class SeqContEvaluator<T> implements Evaluator<T> {
     listeners.putIfAbsent(a, new ArrayList<>());
     listeners.putIfAbsent(b, new ArrayList<>());
     listeners.get(a).add(t -> {
-      Optional<FunNode<T>> check = b.setInput(i, t);
+      final Optional<FunNode<T>> check = b.setInput(i, t);
       if (check.isPresent()) {
         toEval.add(check.get());
       }
@@ -27,7 +27,7 @@ public class SeqContEvaluator<T> implements Evaluator<T> {
     });
 
     while (!toEval.isEmpty()) {
-      FunNode<T> node = toEval.removeFirst();
+      final FunNode<T> node = toEval.removeFirst();
       node.eval();
       listeners.get(node).forEach(c -> c.accept(node.getResult()));
     }

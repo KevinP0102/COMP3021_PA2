@@ -22,15 +22,21 @@ public class TaskPool {
         idle.release();
         wait();
       }
-      return Optional.of(queue.removeFirst());
+
+      if (terminated) {return Optional.empty();}
+
+      try {
+      return Optional.of(queue.remove());}
+      catch (Exception e) {
+      }
+
+      return Optional.empty();
     }
 
-    public void addTask(Runnable task) {
+    public synchronized void addTask(Runnable task) {
       // part 3: task pool
-      queue.addLast(task);
-      synchronized (this) {
-        notify();
-      }
+      queue.add(task);
+      notify();
     }
 
     public void terminate() {
@@ -38,6 +44,8 @@ public class TaskPool {
       idle.release();
       terminated = true;
     }
+
+
   }
 
   private TaskQueue queue;
@@ -54,10 +62,8 @@ public class TaskPool {
         while (true) {
           if (queue.terminated) {break;}
           try {
-            Runnable task = queue.getTask().get();
-            task.run();
+            queue.getTask().ifPresent(Runnable::run);
           } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
             break;
           }
         }
@@ -68,7 +74,7 @@ public class TaskPool {
 
   public void addTask(Runnable task) { queue.addTask(task); }
 
-  public synchronized void addTasks(List<Runnable> tasks) {
+  public void addTasks(List<Runnable> tasks) {
     // part 3: task pool
     tasks.forEach(queue::addTask);
 
@@ -91,4 +97,18 @@ public class TaskPool {
       }
     }
   }
+
+  public void await() {
+    IntStream.range(0, workers.length).forEach(i -> {
+      try {
+        // this will send an InterruptedException to the thread to wake it up
+        // from blocking operations such as Thread.sleep.
+        if (workers[i].isAlive())
+          workers[i].interrupt();
+        workers[i].join();
+      } catch (InterruptedException ex) {
+      }
+    });
+  }
+
 }

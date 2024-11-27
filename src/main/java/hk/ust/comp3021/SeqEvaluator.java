@@ -14,8 +14,8 @@ public class SeqEvaluator<T> implements Evaluator<T> {
     listeners.get(a).add(t -> {
       Optional<FunNode<T>> check = b.setInput(i, t);
       if (check.isPresent()) {
-        check.get().eval();
-        listeners.get(check.get()).forEach(c -> c.accept(b.getResult()));
+        b.eval();
+        listeners.get(b).forEach(c -> c.accept(b.getResult()));
       }
     } );
   }

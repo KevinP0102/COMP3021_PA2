@@ -1,7 +1,12 @@
 package hk.ust.comp3021;
 
+import java.util.function.IntBinaryOperator;
 import java.util.function.IntUnaryOperator;
+
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class ArrayUtilsTest {
   // complex map function to make things slow, so parallelization make sense

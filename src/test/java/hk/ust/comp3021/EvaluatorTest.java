@@ -1,18 +1,21 @@
 package hk.ust.comp3021;
 
+import java.lang.annotation.Repeatable;
 import java.nio.ByteBuffer;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 public class EvaluatorTest {
   static List<Evaluator<Object>> evaluators() {
-    //return List.of(new SeqEvaluator<>(), new SeqContEvaluator<>(), new ParEvaluator<>(4));
-    return List.of(new SeqContEvaluator<>());
+    return List.of(new SeqEvaluator<>(), new SeqContEvaluator<>(), new ParEvaluator<>(4));
+
   }
 
   @ParameterizedTest

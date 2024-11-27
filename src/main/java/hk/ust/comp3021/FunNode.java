@@ -28,10 +28,21 @@ public class FunNode<T> {
     }
   }
 
-  public T getResult() { return output.get(); }
+  public T getResult() {
+    synchronized (this) {
+      while (output.isEmpty()) {
+        try {
+          wait();
+        } catch (InterruptedException e) {}
+      }
+      return output.get();
+    }
+  }
 
   public void eval() {
-    // part 1: function data dependency graph node
-    output = Optional.of(f.apply(inputs.stream().map(Optional::get).toList()));
+    synchronized (this) {
+      output = Optional.of(f.apply(inputs.stream().map(Optional::get).toList()));
+      notifyAll();
+    }
   }
 }

@@ -4,49 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6a551f7-a4a0-4044-9141-212271726412" name="Changes" comment="PA files init">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/sha1-checksums.bin" afterDir="false" />
+    <list default="true" id="b6a551f7-a4a0-4044-9141-212271726412" name="Changes" comment="All tasks done. Need testing tho">
+      <change afterPath="$PROJECT_DIR$/.gradle/workspace-id.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/hk.ust.comp3021.ArrayUtilsTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-hk.ust.comp3021.ArrayUtilsTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/ArrayUtilsTest.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/ArrayUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/FunNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/ParEvaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/SeqContEvaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/SeqEvaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/TaskPool$TaskQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/TaskPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/hk/ust/comp3021/ArrayUtilsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/hk/ust/comp3021/EvaluatorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/hk/ust/comp3021/SimpleScalar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/hk/ust/comp3021/TaskPoolTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/hk.ust.comp3021.SimpleScalar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/hk.ust.comp3021.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-hk.ust.comp3021.SimpleScalar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/ArrayUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/ArrayUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/FunNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/FunNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/ParEvaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/ParEvaluator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/SeqEvaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/SeqEvaluator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/TaskPool$TaskQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/TaskPool$TaskQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/TaskPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hk/ust/comp3021/TaskPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/hk/ust/comp3021/ArrayUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/hk/ust/comp3021/ArrayUtilsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/hk/ust/comp3021/EvaluatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/hk/ust/comp3021/EvaluatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/hk.ust.comp3021.TaskPoolTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/hk.ust.comp3021.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/hk.ust.comp3021.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-hk.ust.comp3021.TaskPoolTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/ArrayUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/ArrayUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/FunNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/FunNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/ParEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/ParEvaluator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/SeqContEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/SeqContEvaluator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/SeqEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/SeqEvaluator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/TaskPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hk/ust/comp3021/TaskPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hk/ust/comp3021/ArrayUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hk/ust/comp3021/ArrayUtilsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/hk/ust/comp3021/EvaluatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hk/ust/comp3021/EvaluatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hk/ust/comp3021/TaskPoolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hk/ust/comp3021/TaskPoolTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +55,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -108,7 +105,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.ArrayUtilsTest.benchParMap.executor": "Run",
+    "Gradle.ArrayUtilsTest.benchParPrefixSum.executor": "Run",
+    "Gradle.ArrayUtilsTest.benchSeqMap.executor": "Run",
+    "Gradle.ArrayUtilsTest.benchSeqPrefixSum.executor": "Run",
+    "Gradle.ArrayUtilsTest.executor": "Run",
+    "Gradle.ArrayUtilsTest.testMap.executor": "Run",
+    "Gradle.ArrayUtilsTest.testPrefixSum.executor": "Run",
+    "Gradle.ArrayUtilsTest.testPrefixSum2.executor": "Run",
+    "Gradle.EvaluatorTest.dag (1).executor": "Run",
+    "Gradle.EvaluatorTest.dag.executor": "Run",
     "Gradle.EvaluatorTest.executor": "Run",
+    "Gradle.EvaluatorTest.sumArrays.executor": "Run",
     "Gradle.SimpleScalar.executor": "Run",
     "Gradle.TaskPoolTest (1).executor": "Run",
     "Gradle.TaskPoolTest.TestSimple.executor": "Run",
@@ -126,11 +134,12 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="TaskPoolTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ArrayUtilsTest">
+    <configuration name="ArrayUtilsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -143,7 +152,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;hk.ust.comp3021.TaskPoolTest&quot;" />
+            <option value="&quot;hk.ust.comp3021.ArrayUtilsTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -154,7 +163,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaskPoolTest.TestSimple" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ArrayUtilsTest.benchSeqPrefixSum" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -167,7 +176,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;hk.ust.comp3021.TaskPoolTest.TestSimple&quot;" />
+            <option value="&quot;hk.ust.comp3021.ArrayUtilsTest.benchSeqPrefixSum&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -178,7 +187,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaskPoolTest.TestSimple2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ArrayUtilsTest.testPrefixSum" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -191,7 +200,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;hk.ust.comp3021.TaskPoolTest.TestSimple2&quot;" />
+            <option value="&quot;hk.ust.comp3021.ArrayUtilsTest.testPrefixSum&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -202,7 +211,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaskPoolTest.TestTerminate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ArrayUtilsTest.testPrefixSum2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -215,7 +224,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;hk.ust.comp3021.TaskPoolTest.TestTerminate&quot;" />
+            <option value="&quot;hk.ust.comp3021.ArrayUtilsTest.testPrefixSum2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="EvaluatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hk.ust.comp3021.EvaluatorTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -228,10 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TaskPoolTest.TestTerminate" />
-        <item itemvalue="Gradle.TaskPoolTest.TestSimple2" />
-        <item itemvalue="Gradle.TaskPoolTest.TestSimple" />
-        <item itemvalue="Gradle.TaskPoolTest" />
+        <item itemvalue="Gradle.ArrayUtilsTest" />
+        <item itemvalue="Gradle.ArrayUtilsTest.benchSeqPrefixSum" />
+        <item itemvalue="Gradle.EvaluatorTest" />
+        <item itemvalue="Gradle.ArrayUtilsTest.testPrefixSum" />
+        <item itemvalue="Gradle.ArrayUtilsTest.testPrefixSum2" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +288,11 @@
       <workItem from="1732468215028" duration="221000" />
       <workItem from="1732468444087" duration="10790000" />
       <workItem from="1732526716419" duration="19220000" />
-      <workItem from="1732554227864" duration="1876000" />
+      <workItem from="1732554227864" duration="2507000" />
+      <workItem from="1732620862310" duration="17416000" />
+      <workItem from="1732644542797" duration="1650000" />
+      <workItem from="1732674765738" duration="15634000" />
+      <workItem from="1732697963409" duration="4427000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -288,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732468997055</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="tasks up to 2.4 done">
+      <option name="closed" value="true" />
+      <created>1732556137773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732556137773</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +366,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
     <MESSAGE value="PA files init" />
-    <option name="LAST_COMMIT_MESSAGE" value="PA files init" />
+    <MESSAGE value="tasks up to 2.4 done" />
+    <MESSAGE value="All tasks done. Need testing tho" />
+    <option name="LAST_COMMIT_MESSAGE" value="All tasks done. Need testing tho" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.AssertionError" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/COMP3021_PA2$TaskPoolTest_TestTerminate.ic" NAME="TaskPoolTest.TestTerminate Coverage Results" MODIFIED="1732553673816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

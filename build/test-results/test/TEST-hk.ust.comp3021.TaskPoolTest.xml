@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hk.ust.comp3021.TaskPoolTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-11-25T17:29:09" hostname="KP" time="1.3">
-  <properties/>
-  <testcase name="TestSimple2()" classname="hk.ust.comp3021.TaskPoolTest" time="0.565"/>
-  <testcase name="TestTerminate()" classname="hk.ust.comp3021.TaskPoolTest" time="0.115"/>
-  <testcase name="TestSimple()" classname="hk.ust.comp3021.TaskPoolTest" time="0.618"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -46,31 +46,29 @@ public class ArrayUtils {
     // Bonus part
     int[] z = new int[input.length / CHUNK_SIZE + (input.length % CHUNK_SIZE != 0 ? 1 : 0)];
 
-    pool.addTasks(
-            IntStream.range(0, z.length).mapToObj(i -> (Runnable) () -> {
-                    z[i] = input[i * CHUNK_SIZE];
-                    z[i] = IntStream.range(i * CHUNK_SIZE + 1, Math.min((i + 1) * CHUNK_SIZE, input.length))
-                            .reduce(z[i], (acc, j) -> op.applyAsInt(acc, input[j]));
+    var tasks = IntStream.range(0, z.length).mapToObj(i -> (Runnable) () -> {
+                  z[i] = input[i * CHUNK_SIZE];
+                  z[i] = IntStream.range(i * CHUNK_SIZE + 1, Math.min((i + 1) * CHUNK_SIZE, input.length))
+                          .reduce(z[i], (acc, j) -> op.applyAsInt(acc, input[j]));
 
-                    })
-                    .collect(Collectors.toList())
-    );
+              })
+              .collect(Collectors.toList());
+
+    pool.addTasks(tasks);
 
     IntStream.range(1, z.length).forEach(i -> {
-      z[i] = op.applyAsInt(z[i-1], z[i]);
+        z[i] = op.applyAsInt(z[i - 1], z[i]);
     });
 
-    pool.addTasks(
-              IntStream.range(0, z.length).mapToObj(i -> (Runnable) () -> {
-                      if (i != 0) {
-                          input[i * CHUNK_SIZE] = op.applyAsInt(z[i - 1], input[i * CHUNK_SIZE]);
-                      }
-                      IntStream.range(i * CHUNK_SIZE + 1, Math.min((i + 1) * CHUNK_SIZE, input.length)).forEach(j -> {
-                          input[j] = op.applyAsInt(input[j - 1], input[j]);
-                      });
+    var tasks2 = IntStream.range(0, z.length).mapToObj(i -> (Runnable) () -> {
+        if (i != 0) {
+            input[i * CHUNK_SIZE] = op.applyAsInt(z[i - 1], input[i * CHUNK_SIZE]);
+        }
+        IntStream.range(i * CHUNK_SIZE + 1, Math.min((i + 1) * CHUNK_SIZE, input.length)).forEach(j -> {
+            input[j] = op.applyAsInt(input[j - 1], input[j]);
+        });
+        }).collect(Collectors.toList());
 
-              }).collect(Collectors.toList())
-    );
-
+    pool.addTasks(tasks2);
   }
 }

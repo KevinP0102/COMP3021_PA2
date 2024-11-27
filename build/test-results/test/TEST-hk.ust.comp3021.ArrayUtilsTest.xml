@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hk.ust.comp3021.ArrayUtilsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-11-27T10:11:32" hostname="KP" time="31.319">
+<testsuite name="hk.ust.comp3021.ArrayUtilsTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2024-11-27T13:22:26" hostname="KP" time="3.48">
   <properties/>
-  <testcase name="testMap()" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.239"/>
-  <testcase name="testPrefixSum()" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.151"/>
-  <testcase name="benchSeqPrefixSum()" classname="hk.ust.comp3021.ArrayUtilsTest" time="7.487"/>
-  <testcase name="benchParMap()" classname="hk.ust.comp3021.ArrayUtilsTest" time="2.175"/>
-  <testcase name="benchSeqMap()" classname="hk.ust.comp3021.ArrayUtilsTest" time="11.378"/>
-  <testcase name="benchParPrefixSum()" classname="hk.ust.comp3021.ArrayUtilsTest" time="9.887"/>
+  <testcase name="repetition 1 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.195"/>
+  <testcase name="repetition 2 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.174"/>
+  <testcase name="repetition 3 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.182"/>
+  <testcase name="repetition 4 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.156"/>
+  <testcase name="repetition 5 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.178"/>
+  <testcase name="repetition 6 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.215"/>
+  <testcase name="repetition 7 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.171"/>
+  <testcase name="repetition 8 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.171"/>
+  <testcase name="repetition 9 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.199"/>
+  <testcase name="repetition 10 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.167"/>
+  <testcase name="repetition 11 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.19"/>
+  <testcase name="repetition 12 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.146"/>
+  <testcase name="repetition 13 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.144"/>
+  <testcase name="repetition 14 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.16"/>
+  <testcase name="repetition 15 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.174"/>
+  <testcase name="repetition 16 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.156"/>
+  <testcase name="repetition 17 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.177"/>
+  <testcase name="repetition 18 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.193"/>
+  <testcase name="repetition 19 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.166"/>
+  <testcase name="repetition 20 of 20" classname="hk.ust.comp3021.ArrayUtilsTest" time="0.144"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

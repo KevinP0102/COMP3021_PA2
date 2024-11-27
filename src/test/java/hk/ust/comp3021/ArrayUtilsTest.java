@@ -67,7 +67,7 @@ public class ArrayUtilsTest {
       ArrayUtils.parInclusivePrefixSum(input, (x, y) -> x + y, pool);
   }
 
-  @Test
+  @RepeatedTest(20)
   public void testPrefixSum() {
     TaskPool pool = new TaskPool(4);
     int[] input = new int[1 << 24];

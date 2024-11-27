@@ -16,21 +16,25 @@ public class TaskPool {
       this.idle = idle;
     }
 
-    public synchronized Optional<Runnable> getTask() throws InterruptedException {
+    public Optional<Runnable> getTask() throws InterruptedException {
       // part 3: task pool
-      if (queue.isEmpty()) {
-        idle.release();
-        wait();
+      synchronized (this) {
+        while (queue.isEmpty()) {
+          --working;
+          if (working == 0) {
+            idle.release();
+            working = queue.size();
+          }
+          wait();
+          ++working;
+        }
+
+        try {
+          return Optional.of(queue.remove());
+        } catch (Exception e) {
+          return Optional.empty();
+        }
       }
-
-      if (terminated) {return Optional.empty();}
-
-      try {
-      return Optional.of(queue.remove());}
-      catch (Exception e) {
-      }
-
-      return Optional.empty();
     }
 
     public synchronized void addTask(Runnable task) {
@@ -41,16 +45,14 @@ public class TaskPool {
 
     public void terminate() {
       // part 3: task pool
-      idle.release();
+      idle.release(working);
       terminated = true;
     }
-
-
   }
 
   private TaskQueue queue;
   private Thread workers[];
-  private Semaphore idle = new Semaphore(1);
+  private Semaphore idle = new Semaphore(0);
 
   public TaskPool(int numThreads) {
     // part 3: task pool
@@ -61,10 +63,11 @@ public class TaskPool {
       workers[i] = new Thread(() -> {
         while (true) {
           if (queue.terminated) {break;}
+          //if (queue.queue.isEmpty()) {idle.release();}
           try {
             queue.getTask().ifPresent(Runnable::run);
           } catch (InterruptedException e) {
-            break;
+            //break;
           }
         }
       });
@@ -74,7 +77,7 @@ public class TaskPool {
 
   public void addTask(Runnable task) { queue.addTask(task); }
 
-  public void addTasks(List<Runnable> tasks) {
+  public synchronized void addTasks(List<Runnable> tasks) {
     // part 3: task pool
     tasks.forEach(queue::addTask);
 
@@ -97,18 +100,4 @@ public class TaskPool {
       }
     }
   }
-
-  public void await() {
-    IntStream.range(0, workers.length).forEach(i -> {
-      try {
-        // this will send an InterruptedException to the thread to wake it up
-        // from blocking operations such as Thread.sleep.
-        if (workers[i].isAlive())
-          workers[i].interrupt();
-        workers[i].join();
-      } catch (InterruptedException ex) {
-      }
-    });
-  }
-
 }
